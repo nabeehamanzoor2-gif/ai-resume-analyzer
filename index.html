@@ -1,0 +1,72 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Analyzer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1><i class="fa-solid fa-robot"></i> AI Resume Analyzer</h1>
+        <p>Smart Resume Generator with AI-style analysis</p>
+    </div>
+
+    <!-- FORM CARD -->
+    <form method="POST" class="card">
+
+        <label>Enter Access Code</label>
+
+        <input type="password"
+               name="access_code"
+               placeholder="Enter Access Code"
+               required>
+
+        <label>Enter Your Details</label>
+
+        <textarea name="user_input"
+                  placeholder="e.g. Python Developer, HTML, CSS, Flask, Student..."
+                  required></textarea>
+
+        <button type="submit">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Resume
+        </button>
+
+        <small>Tip: Include skills, education, experience for better results</small>
+
+    </form>
+
+    <!-- OUTPUT -->
+    {% if response %}
+    <div class="output">
+
+        <h2><i class="fa-solid fa-chart-line"></i> Analysis Report</h2>
+
+        <p style="white-space: pre-line;">{{ response }}</p>
+
+        <a href="/download">
+            <button class="download">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </button>
+        </a>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

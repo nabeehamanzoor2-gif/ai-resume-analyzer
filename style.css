@@ -1,0 +1,137 @@
+/* =======================
+   GLOBAL
+======================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* =======================
+   CONTAINER
+======================= */
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+/* =======================
+   HEADER
+======================= */
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #cfd8dc;
+    margin-bottom: 30px;
+}
+
+/* =======================
+   CARD FORM
+======================= */
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    width: 45%;
+    margin: auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* LABEL */
+.card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* TEXTAREA */
+textarea {
+    width: 95%;
+    height: 150px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+}
+
+/* BUTTON */
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* SMALL TEXT */
+small {
+    display: block;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+/* =======================
+   OUTPUT BOX
+======================= */
+.output {
+    margin-top: 25px;
+    background: white;
+    color: black;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+/* OUTPUT TITLE */
+.output h2 {
+    margin-top: 0;
+}
+
+/* DOWNLOAD BUTTON */
+.download {
+    background: #28a745;
+}
+
+.download:hover {
+    background: #1e7e34;
+}
+
+/* ICONS */
+i {
+    margin-right: 6px;
+    color: #00c6ff;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .card, .output {
+        width: 85%;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+}
